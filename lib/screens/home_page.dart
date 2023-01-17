@@ -101,7 +101,7 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
               // Tab bar view
-               Expanded(
+              const Expanded(
                 child: TabBarView(
                   children: [
                     //Dount page
