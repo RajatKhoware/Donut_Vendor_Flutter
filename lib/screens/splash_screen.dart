@@ -1,6 +1,8 @@
+import 'package:donut_app_ui/screens/home_page.dart';
 import 'package:donut_app_ui/utils/custom_text.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
@@ -39,7 +41,11 @@ class SplashScreen extends StatelessWidget {
                             ],
                           ),
                         ),
-                      
+                        child: Lottie.network(
+                          "https://assets9.lottiefiles.com/private_files/lf30_rfnappr0.json",
+                          width: 300,
+                          height: 300,
+                        ),
                       ),
                     ),
                     const Padding(
@@ -95,30 +101,36 @@ class SplashScreen extends StatelessWidget {
             const SizedBox(height: 80),
             const CustomFont(
                 text: "   We Have\nSpecial Food",
-                fontSize: 35,
-                color: Colors.white,
+                fontSize: 40,
+                color: Colors.pinkAccent,
                 fontWeight: FontWeight.w900),
             const SizedBox(height: 20),
-            Container(
-              width: 180,
-              height: 60,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(30),
-                color: Colors.white,
-                boxShadow: const [
-                  BoxShadow(
-                    color: Colors.black12,
-                    offset: Offset(0, 20),
-                    blurRadius: 20,
-                  ),
-                ],
-              ),
-              child: const Center(
-                child: CustomFont(
-                    text: "Let's Explor",
-                    fontSize: 20,
-                    color: Color(0xFFf68faa),
-                    fontWeight: FontWeight.w700),
+            InkWell(
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const HomePage()));
+              },
+              child: Container(
+                width: 180,
+                height: 60,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(30),
+                  color: Colors.white,
+                  boxShadow: const [
+                    BoxShadow(
+                      color: Colors.black12,
+                      offset: Offset(0, 20),
+                      blurRadius: 20,
+                    ),
+                  ],
+                ),
+                child: const Center(
+                  child: CustomFont(
+                      text: "Let's Explore",
+                      fontSize: 20,
+                      color: Colors.pinkAccent,
+                      fontWeight: FontWeight.w700),
+                ),
               ),
             )
           ],

@@ -25,7 +25,7 @@ class CustomGridView extends StatelessWidget {
         padding: const EdgeInsets.all(12.0),
         itemCount: dountOnSale.length,
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 2, childAspectRatio: 1 / 1.5),
+            crossAxisCount: 2, childAspectRatio: 1 / 1.54),
         itemBuilder: (context, index) {
           final product = listOfProduct[index];
           return ProductTile(
@@ -52,5 +52,3 @@ class CustomGridView extends StatelessWidget {
         });
   }
 }
-
-
