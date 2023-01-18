@@ -12,7 +12,7 @@ class CoffeeTab extends StatelessWidget {
       category: "Tea",
       productImg: "assets/food_img/coffee/3d_coffee.png",
       imgScale: 3.6,
-      productBgColor: Color.fromARGB(255, 246, 237, 233),
+      productBgColor: const Color.fromARGB(255, 246, 237, 233),
     );
   }
 }
