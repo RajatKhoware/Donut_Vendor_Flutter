@@ -1,3 +1,4 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
@@ -11,6 +12,7 @@ class ProductTile extends StatefulWidget {
   final String productImg;
   final String productCategory;
   final VoidCallback onTap;
+  final VoidCallback addToCart;
 
   const ProductTile({
     Key? key,
@@ -19,6 +21,7 @@ class ProductTile extends StatefulWidget {
     required this.productImg,
     required this.productCategory,
     required this.onTap,
+    required this.addToCart,
     this.productColor,
   }) : super(key: key);
 
@@ -131,18 +134,15 @@ class _ProductTileState extends State<ProductTile>
                         "https://assets10.lottiefiles.com/packages/lf20_2THqE1.json",
                         controller: controller,
                         fit: BoxFit.fill,
-                      )
-                      // Icon(
-                      //   CupertinoIcons.heart_fill,
-                      //   size: 20,
-                      //   color: Colors.pink.shade400,
-                      // ),
-                      ),
+                      )),
                 ),
-                Icon(
-                  CupertinoIcons.add,
-                  size: 20,
-                  color: Colors.pink.shade400,
+                InkWell(
+                  onTap: widget.addToCart,
+                  child: Icon(
+                    CupertinoIcons.add,
+                    size: 20,
+                    color: Colors.pink.shade400,
+                  ),
                 ),
               ],
             ),

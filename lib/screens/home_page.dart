@@ -1,4 +1,5 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'package:donut_app_ui/pages/addtocart_page.dart';
 import 'package:donut_app_ui/utils/my_tab.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -72,17 +73,25 @@ class _HomePageState extends State<HomePage> {
               Padding(
                 padding: const EdgeInsets.only(left: 25, top: 5),
                 child: Row(
-                  children: const [
-                    CustomFont(
+                  children: [
+                    const CustomFont(
                         text: "I want to ",
                         fontSize: 27,
                         color: Colors.black,
                         fontWeight: FontWeight.w500),
-                    CustomFont(
+                    const CustomFont(
                         text: "Eat",
                         fontSize: 35,
                         color: Colors.black,
-                        fontWeight: FontWeight.w700)
+                        fontWeight: FontWeight.w700),
+                    ElevatedButton(
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => AddToCartPage()));
+                        },
+                        child: Text("AddTocart"))
                   ],
                 ),
               ),
