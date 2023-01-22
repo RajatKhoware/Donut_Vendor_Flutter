@@ -9,7 +9,6 @@ class PizzaTab extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomGridView(
       listOfProduct: pizzaOnSale,
-      category: "Pizza",
       productImg: "assets/food_img/pizza/3d_pizza.png",
       imgScale: 4,
       productBgColor: Color.fromARGB(255, 246, 233, 233),

@@ -8,7 +8,6 @@ List<dynamic> cartItems = [];
 
 class CustomGridView extends StatefulWidget {
   final List listOfProduct;
-  final String category;
   final String productImg;
   final Color productBgColor;
   final double? imgScale;
@@ -16,7 +15,6 @@ class CustomGridView extends StatefulWidget {
   const CustomGridView({
     Key? key,
     required this.listOfProduct,
-    required this.category,
     required this.productImg,
     required this.productBgColor,
     this.imgScale = 4.7,
@@ -27,11 +25,12 @@ class CustomGridView extends StatefulWidget {
 }
 
 class _CustomGridViewState extends State<CustomGridView> {
+  int itemCount = 0;
   @override
   Widget build(BuildContext context) {
     return GridView.builder(
         padding: const EdgeInsets.all(12.0),
-        itemCount: dountOnSale.length,
+        itemCount: widget.listOfProduct.length,
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2, childAspectRatio: 1 / 1.54),
         itemBuilder: (context, index) {
@@ -41,7 +40,7 @@ class _CustomGridViewState extends State<CustomGridView> {
             productPrice: product[1],
             productColor: product[2],
             productImg: product[3],
-            productCategory: widget.category,
+            productCategory: product[5],
             onTap: () {
               Navigator.push(
                 context,
@@ -57,7 +56,21 @@ class _CustomGridViewState extends State<CustomGridView> {
               );
             },
             addToCart: () {
-              cartItems.add(dountOnSale[index]);
+              ScaffoldMessenger.of(context).showSnackBar(
+                const SnackBar(
+                  content: Text('Item added to cart'),
+                  duration: Duration(seconds: 2),
+                ),
+              );
+              for (var item in cartItems) {
+                if (item[0] == product[0]) {
+                  itemCount++;
+                final items =  product[1] * 2;
+                  return;
+                }
+              }
+              itemCount = 1;
+              cartItems.add(widget.listOfProduct[index]);
               print(cartItems.length);
               setState(() {});
             },

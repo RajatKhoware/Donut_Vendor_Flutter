@@ -11,7 +11,6 @@ class DonutTab extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomGridView(
       listOfProduct: dountOnSale,
-      category: "Dumkin's",
       productImg: "assets/food_img/donut/3d_donut.png",
       productBgColor: Color.fromARGB(255, 250, 245, 247),
     );

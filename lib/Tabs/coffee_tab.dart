@@ -9,7 +9,6 @@ class CoffeeTab extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomGridView(
       listOfProduct: coffeeOnSale,
-      category: "Tea",
       productImg: "assets/food_img/coffee/3d_coffee.png",
       imgScale: 3.6,
       productBgColor: const Color.fromARGB(255, 246, 237, 233),

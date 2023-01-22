@@ -84,14 +84,24 @@ class _HomePageState extends State<HomePage> {
                         fontSize: 35,
                         color: Colors.black,
                         fontWeight: FontWeight.w700),
-                    ElevatedButton(
-                        onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => AddToCartPage()));
-                        },
-                        child: Text("AddTocart"))
+                    const SizedBox(width: 95),
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const AddToCartPage()));
+                      },
+                      child: Container(
+                        width: 60,
+                        height: 40,
+                        decoration: BoxDecoration(
+                          border: Border.all(),
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                        child: const Center(child: Icon(CupertinoIcons.cart)),
+                      ),
+                    )
                   ],
                 ),
               ),

@@ -9,7 +9,6 @@ class BurgerTab extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomGridView(
       listOfProduct: burgerOnSale,
-      category: "Burger's",
       productImg: "assets/food_img/burger/3d_burger.png",
       imgScale: 6.2,
       productBgColor: Color.fromARGB(255, 246, 230, 223),
