@@ -96,6 +96,7 @@ class DetailsPage extends StatelessWidget {
                           color: Colors.black,
                           fontWeight: FontWeight.w600),
                       const SizedBox(height: 20),
+                      //List of Ingredients used 
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: const [
@@ -117,20 +118,21 @@ class DetailsPage extends StatelessWidget {
                               color: Colors.pink),
                         ],
                       ),
-                      SizedBox(height: 20),
+                      const SizedBox(height: 20),
+                      //Details description of products
                       const CustomFont(
                           text: "Details",
                           fontSize: 23,
                           color: Colors.black,
                           fontWeight: FontWeight.w600),
-                      SizedBox(height: 6),
+                      const SizedBox(height: 6),
                       Text(
                         productDetail,
                         style: TextStyle(
                           color: Colors.grey.shade700,
                         ),
                       ),
-                      SizedBox(height: 15),
+                      const SizedBox(height: 15),
                       Container(
                         width: 330,
                         height: 60,
@@ -144,6 +146,7 @@ class DetailsPage extends StatelessWidget {
                         child: Padding(
                           padding: const EdgeInsets.only(
                               left: 20, top: 12, right: 20),
+                              //check out card
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [

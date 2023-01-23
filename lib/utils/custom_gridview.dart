@@ -1,10 +1,6 @@
-import 'package:donut_app_ui/utils/product_tile.dart';
+import 'package:donut_app_ui/pages/widgets/product_tile.dart';
 import 'package:flutter/material.dart';
-
 import '../pages/details_page.dart';
-import 'list_of_items.dart';
-
-List<dynamic> cartItems = [];
 
 class CustomGridView extends StatefulWidget {
   final List listOfProduct;
@@ -24,7 +20,11 @@ class CustomGridView extends StatefulWidget {
   State<CustomGridView> createState() => _CustomGridViewState();
 }
 
+//List of items present in cart
+List<dynamic> cartItems = [];
+
 class _CustomGridViewState extends State<CustomGridView> {
+  //Product count present in cart
   int itemCount = 0;
   @override
   Widget build(BuildContext context) {
@@ -32,7 +32,9 @@ class _CustomGridViewState extends State<CustomGridView> {
         padding: const EdgeInsets.all(12.0),
         itemCount: widget.listOfProduct.length,
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 2, childAspectRatio: 1 / 1.54),
+          crossAxisCount: 2,
+          childAspectRatio: 1 / 1.54,
+        ),
         itemBuilder: (context, index) {
           final product = widget.listOfProduct[index];
           return ProductTile(
@@ -65,21 +67,14 @@ class _CustomGridViewState extends State<CustomGridView> {
               for (var item in cartItems) {
                 if (item[0] == product[0]) {
                   itemCount++;
-                final items =  product[1] * 2;
                   return;
                 }
               }
               itemCount = 1;
               cartItems.add(widget.listOfProduct[index]);
-              print(cartItems.length);
               setState(() {});
             },
           );
         });
   }
 }
-
-
-
-// add to cart button taped -> we want to store the data of the taped item in a list -> and then using this we can show the data to use of add to cart with total price 
-//Add to cart button tapped -> cart me add ho jaye and remove from cart button show ho jaye -> total amonut show ho jaye jitne bhi product hai cart me sabka mila kar

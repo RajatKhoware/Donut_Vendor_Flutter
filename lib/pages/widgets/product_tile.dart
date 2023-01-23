@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
-import 'custom_text.dart';
+import '../../utils/custom_text.dart';
 
 class ProductTile extends StatefulWidget {
   final String productName;

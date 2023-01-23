@@ -1,3 +1,5 @@
+import 'package:donut_app_ui/pages/addtocart_page.dart';
+import 'package:donut_app_ui/pages/order_placed.dart';
 import 'package:donut_app_ui/screens/home_page.dart';
 import 'package:donut_app_ui/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
@@ -17,7 +19,13 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const HomePage(),
+      home: const SplashScreen(),
+      routes: {
+        "/home": (context) => const HomePage(),
+        "/splash_screen": (context) => const SplashScreen(),
+        "/add_to_cart": (context) => const AddToCartPage(),
+        "/order_placed": (context) => const OrderPlacedPage(),
+      },
     );
   }
 }
