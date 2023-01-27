@@ -67,7 +67,7 @@ class DetailsPage extends StatelessWidget {
                     ),
                     Image.asset(
                       productImg,
-                      scale: imgScale,
+                      scale: imgScale, 
                     ),
                   ],
                 ),
