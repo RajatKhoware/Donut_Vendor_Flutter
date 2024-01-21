@@ -1,16 +1,30 @@
-# donut_app_ui
+# Donut_Vendor
 
-A new Flutter project.
+# About
+Dount Vendor is a Platform to buy snacks { Dount, Coffee, Pizza, Milkshakes}
 
-## Getting Started
+## GIF
 
-This project is a starting point for a Flutter application.
+<div class="column">
+<img src= "https://github.com/RajatKhoware/Donut_UI_Flutter/assets/107408201/fe6aadc5-9c45-490e-890c-773e05fbc628" width="180" height="380"/>
+</div>
 
-A few resources to get you started if this is your first Flutter project:
+## UI
+<div class="column">
+<img src= "https://github.com/RajatKhoware/Donut_UI_Flutter/assets/107408201/310c0b75-e29d-4c2d-9aca-598298e0886e" height="460"/>
+</div>
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+#### Features
+* Splash Screen
+* Home Screen
+* Tab Bars
+* Add to cart
+* Add to wishlist
+* Place Order
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+## MIT License
+
+Copyright (c) 2022 RajatKhoware
+
+
